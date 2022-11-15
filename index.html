@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Paralax</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+                <img src="/img/logo2.png" class="logo">
+                    <ul>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#graphics">GRAPHICS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+            </nav>
+        </header>
+        <section class="paralax">
+            <img src="img/background.png" class="background">
+            <img src="img/sun.png" class="sun">
+            <img src="img/cloud.png" class="cloud">
+            <img src="img/foreground.png" class="foreground">
+            <img src="img/tree.png" class="tree">
+        </section>
+        <section class="about" id="about">
+            <b class="hidden">What is a "parallax effect"?</b>
+            <p class="hidden">
+                Have you ever scrolled through a page that felt dynamic? As if you were scrolling through more than one view at once? That’s a parallax effect.
+                It's a web site trend where the background content is moved at a different speed than the foreground and different elements of a page while scrolling - creating a 3D depth effect. What’s often happening is that the background image will be held in place or move slowly while the images and text on the page scroll normally. You can see it in action on the top of the page!
+            </p>
+        </section>
+        <section class="graphics" id="graphics">
+            <img src="img/process.png" id="process" class="hidden">
+            <p class="hidden">
+                This amazing pixel art showing japanese landscape is an modified version of graphic created by <a href="https://www.artstation.com/lennartbutz">Lennart Butz</a>, German artist. In purpose to create a parallax effect on the website i had to define and break apart particular elements of the graphic and set them in the correct order, creating 3D depth.
+            </p>
+        </section>
+        <section class="contact" id="contact">
+            <p class="name">CREATED BY RADOSŁAW CZYŻEWSKI</p>
+            <p class="email">email: r.czyzewski.contact@gmail.com</p>
+        </section>
+    </div>
+</body>
+</html>

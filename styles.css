@@ -1,0 +1,258 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  
+:root {
+    --basic: white;
+    --red: #ff006e;
+    --dark: #374165;
+    --back: #f2f5f4;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: var(--back);
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+/* CUSTOM SCROLL BAR */
+
+.wrapper::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: #ff006f7d;
+}
+
+.wrapper::-webkit-scrollbar-thumb:hover{
+    background-color: var(--red);
+}
+
+.wrapper::-webkit-scrollbar-track {
+    background-color: #3741657c;
+}
+
+.wrapper::-webkit-scrollbar-track:hover {
+    background-color: var(--dark);
+}
+
+
+/* NAVIGATION BAR */
+
+nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+    height: 5rem;
+}
+
+.logo {
+    height: 6rem;
+    position: relative;
+    left: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--basic);
+}
+
+nav li {
+    position: relative;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    margin: 0.5rem;
+    right: 1rem;
+}
+
+nav a {
+    z-index: 1;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.6rem 0.2rem;
+}
+
+nav a:hover {
+    color: var(--back)
+}
+
+nav li::before {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: var(--red);
+    right: 0;
+    z-index: 0;
+    top: 33.33%;
+    transition: all 0.5s;
+}
+
+nav li::after {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: var(--red);
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    transition: all 0.5s;
+ }
+
+nav a::before {
+    position: absolute;
+    content: "";
+    height: 33.33%;
+    width: 0;
+    background-color: var(--red);
+    bottom: 66.66%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+nav li:hover:before,
+nav li:hover::after,
+nav li:hover a::before{
+   width: 100%;
+}
+
+/* PARALAX EFFECT */
+
+.paralax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background {
+    transform: translateZ(-10px) scale(2.05);
+}
+
+.sun {
+    transform: translateZ(-8px) scale(1.85);
+}
+
+.cloud {
+    transform: translateZ(-6px) scale(1.65);
+}
+
+.foreground {
+    transform: translateZ(-5px) scale(1.55);
+}
+
+.background,
+.sun,
+.cloud,
+.foreground,
+.tree {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* TEXT ANIMATIONS */
+
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+}
+
+/* ABOUT */
+
+#about {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    padding: 5rem;
+    background-color: var(--dark);
+    color: var(--basic);
+}
+
+#about > b {
+    font-size: 2.5rem;
+}
+
+/* GRAPHICS */
+
+#graphics {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0 5rem;
+    background-color: var(--basic);
+    color: var(--dark);
+}
+
+#process {
+    width: 30rem;
+}
+
+.graphics a:link {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.graphics a:visited {
+    color: var(--red);
+    text-decoration: none;
+}
+
+/* CONTACT */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 0 5rem;
+    background-color: var(--red);
+    color: var(--basic);
+}
+
+.contact .name {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contact .email {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
